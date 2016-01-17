@@ -1,0 +1,26 @@
+{
+  "name": "elm-buzzword-bingo",
+  "version": "1.0.0",
+  "description": "```bash # command line elm repl                              # interactive repl elm reactor                           # compiler and server elm-make Main.elm                     # compile to HTML in index.html elm-make Main.elm --output main.html  # compile to HTML in main.html elm-make Main.elm --output elm.js     # compile to JS in elm.js elm-make Main.elm --warn              # compile and report warnings ```",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-elm": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadimBrodsky/elm-buzzword-bingo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VadimBrodsky/elm-buzzword-bingo/issues"
+  },
+  "homepage": "https://github.com/VadimBrodsky/elm-buzzword-bingo#readme"
+}
