@@ -29,7 +29,7 @@ comment
 -- each file is a module, Hello.elm
 module Hello where
 
---- other modules can to be imported
+-- other modules can to be imported
 import String
 
 -- an Elm program starts with a main function
@@ -122,10 +122,10 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 h1 [ id "header", class "classy" ] [ text "Heading" ]
 
---- Record
---- Collections of key/value pairs like JS objects or Ruby hashes
---- Consists of fields names and field values
---- Can hold values of different types
+-- Record
+-- Collections of key/value pairs like JS objects or Ruby hashes
+-- Consists of fields names and field values
+-- Can hold values of different types
 
 entry = {phrase = "Future-Proof",
  points = 100,
@@ -133,14 +133,31 @@ entry = {phrase = "Future-Proof",
  id = 1
 }
 
---- to access a filed use the dot notation, or the syntactic sugar 
-entry.phrase  ---> "Future-Proof"
-.phrase entry ---> "Future-Proof"
+-- to access a filed use the dot notation, or the syntactic sugar 
+entry.phrase  --> "Future-Proof"
+.phrase entry --> "Future-Proof"
 
---- to update a record, creates a new record as values are immutable
+-- to update a record, creates a new record as values are immutable
 { entry | points = 500 }
 
---- multiple fields in one go
+-- multiple fields in one go
 clonedEntry = { entry | points = 500, wasSpoken = True }
+
+{-
+ - Map
+ - a higher order function, takes other functions as an argument 
+ - comes from the default module, no need to import
+ - fist argument is a function that takes a value and returns b value
+ - second argument is a list of a values of any type
+ - return values is a list of b values of any type
+ - applies a function to the list of a values, transforming it to a list of b values
+ - functions that take any type variables are polymorphic functions
+-}
+
+List.map  -- <function> : (a -> b) -> List a -> List b
+
+names = ["larry", "moe", "curly"]
+List.map String.toUpper names --> ["LARRY", "MOE", "CURLY"] : List String
+List.map String.length names  --> [5,3,5] : List Int
 
 ```
