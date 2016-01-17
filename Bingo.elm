@@ -13,6 +13,15 @@ newEntry phrase points id =
   }
 
 
+initialModel =
+  { entries =
+      [ newEntry "Doing Agine" 200 2
+      , newEntry "In the Cloud" 300 3
+      , newEntry "Future-Proof" 100 1
+      ]
+  }
+
+
 title message times =
   message ++ " "
     |> toUpper
