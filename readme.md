@@ -98,7 +98,8 @@ title "hello" 2
 import String
 
 -- To use the String functions import the String module
--- The string functions can be used as a qualified import, qualifying the function name with the module where it is defined
+-- The string functions can be used as a qualified import, 
+-- qualifying the function name with the module where it is defined
 
 String.toUpper
 
@@ -108,7 +109,8 @@ String.toUpper
 
 import String exposing (toUpper, repeat, trimRight)
 
--- then these function can be called in the current scope as if they were defined in the current namespace
+-- then these function can be called in the current scope 
+-- as if they were defined in the current namespace
 
 -- to import all of the function of a module to a namespace (..)
 import Html exposing (..)
