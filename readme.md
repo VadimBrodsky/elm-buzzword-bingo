@@ -13,6 +13,8 @@ elm-make Main.elm --warn              # compile and report warnings
 - [Elm Core](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/)
 - [Elm Html](http://package.elm-lang.org/packages/evancz/elm-html/4.0.2/Html)
 - [Elm Html.Attributes](http://package.elm-lang.org/packages/evancz/elm-html/4.0.2/Html-Attributes)
+- [Elm Style Guide](http://elm-lang.org/docs/style-guide)
+- [Elm Records](http://elm-lang.org/docs/records)
 - [Tool: Html to Elm](http://mbylstra.github.io/html-to-elm/)
 
 ```elm
@@ -119,5 +121,26 @@ import Html exposing (..)
 -- Import Html.Attributes for attributes
 import Html.Attributes exposing (..)
 h1 [ id "header", class "classy" ] [ text "Heading" ]
+
+--- Record
+--- Collections of key/value pairs like JS objects or Ruby hashes
+--- Consists of fields names and field values
+--- Can hold values of different types
+
+entry = {phrase = "Future-Proof",
+ points = 100,
+ wasSpoken = False,
+ id = 1
+}
+
+--- to access a filed use the dot notation, or the syntactic sugar 
+entry.phrase  ---> "Future-Proof"
+.phrase entry ---> "Future-Proof"
+
+--- to update a record, creates a new record as values are immutable
+{ entry | points = 500 }
+
+--- multiple fields in one go
+clonedEntry = { entry | points = 500, wasSpoken = True }
 
 ```
