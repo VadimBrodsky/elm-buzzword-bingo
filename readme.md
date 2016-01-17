@@ -27,7 +27,6 @@ String.toUpper  -- <function: toUpper> : String -> String
 -- Return type is the last in the sequence
 String.repeat   -- <function: repeat> : Int -> String -> String
 
-
 -- Functions can be nested
 String.reverse (String.toUpper (String.repeat 3 "lol "))
 
@@ -41,10 +40,10 @@ String.reverse (String.toUpper (String.repeat 3 "lol "))
   |> String.reverse
 
 {-
-- Functions in Elm are not methods, they don't run in the context of an object 
-- There is not shared state, no self or this, 
-- Functions can only access its argument or the values in the enclosing scope, 
-- All values in Elm are immutable, Elm functions are stateless and pure
+ - Functions in Elm are not methods, they don't run in the context of an object 
+ - There is not shared state, no self or this, 
+ - Functions can only access its argument or the values in the enclosing scope, 
+ - All values in Elm are immutable, Elm functions are stateless and pure
 -}
 
 -- Definitions are functions that take no arguments
