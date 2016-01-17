@@ -48,21 +48,18 @@ entryItem entry =
      ]
 
 
-entryList =
-  ul [ ]
-     [ entryItem (newEntry "Future-Proof" 100 1),
-       entryItem (newEntry "Doing Agile" 200 2)
-     ]
+entryList entries =
+  ul [ ] (List.map entryItem entries)
 
 
-view =
+view model =
   div [ id "container" ]
       [ pageHeader,
-        entryList,
+        entryList model.entries,
         pageFooter
       ]
 
 
 main =
-  view
+  view initialModel
 
