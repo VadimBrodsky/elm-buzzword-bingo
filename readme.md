@@ -47,11 +47,13 @@ String.reverse (String.toUpper (String.repeat 3 "lol "))
 -}
 
 -- Definitions are functions that take no arguments
+-- They bind a value to a name
 title =
   "hello"
     |> String.toUpper
     
 -- Functions are defined with the = sign
+-- They can't have zero arguments
 -- <function name> <argument> =
 --   <function body>
 -- The value of the last expression becomes the return value
@@ -74,5 +76,31 @@ title "hello" 2
 
 -- Concatenating strings with ++
 "hello" ++ " " ++ "world"
+
+-- Qualified import:
+import String
+
+-- To use the String functions import the String module
+-- The string functions can be used as a qualified import, qualifying the function name with the module where it is defined
+
+String.toUpper
+
+-- Specific module functions can be imported to the current namespace
+
+-- Unqualified import
+
+import String exposing (toUpper, repeat, trimRight)
+
+-- then these function can be called in the current scope as if they were defined in the current namespace
+
+-- to import all of the function of a module to a namespace (..)
+import Html exposing (..)
+
+-- Lists
+-- Comma separated values of the same type
+[1, 2, 3]
+
+-- Elm Html module use 2 lists: attributes and nested DOM elements
+h1 [ id "header", class "classy" ] [ text "Heading" ]
 
 ```
