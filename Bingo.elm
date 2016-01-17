@@ -5,6 +5,10 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import String exposing (toUpper, repeat, trimRight)
 
+
+-- MODEL
+
+
 newEntry phrase points id =
   { phrase = phrase,
     points = points,
@@ -18,8 +22,12 @@ initialModel =
       [ newEntry "Doing Agine" 200 2
       , newEntry "In the Cloud" 300 3
       , newEntry "Future-Proof" 100 1
+      , newEntry "Rock-Star Ninja" 400 4
       ]
   }
+
+
+-- VIEW
 
 
 title message times =
@@ -58,6 +66,9 @@ view model =
         entryList model.entries,
         pageFooter
       ]
+
+
+-- WIRE IT ALL TOGETHER!
 
 
 main =
