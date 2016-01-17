@@ -1,5 +1,20 @@
 # ELM
 
+```bash
+# command line
+elm repl                              # interactive repl
+elm reactor                           # compiler and server
+elm-make Main.elm                     # compile to HTML in index.html
+elm-make Main.elm --output main.html  # compile to HTML in main.html
+elm-make Main.elm --output elm.js     # compile to JS in elm.js
+elm-make Main.elm --warn              # compile and report warnings
+```
+
+- [Elm Core](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/)
+- [Elm Html](http://package.elm-lang.org/packages/evancz/elm-html/4.0.2/Html)
+- [Elm Html.Attributes](http://package.elm-lang.org/packages/evancz/elm-html/4.0.2/Html-Attributes)
+- [Tool: Html to Elm](http://mbylstra.github.io/html-to-elm/)
+
 ```elm
 -- a single line comment
 
@@ -101,6 +116,8 @@ import Html exposing (..)
 [1, 2, 3]
 
 -- Elm Html module use 2 lists: attributes and nested DOM elements
+-- Import Html.Attributes for attributes
+import Html.Attributes exposing (..)
 h1 [ id "header", class "classy" ] [ text "Heading" ]
 
 ```
