@@ -1,7 +1,7 @@
 {
   "name": "elm-buzzword-bingo",
   "version": "1.0.0",
-  "description": "```bash # command line elm repl                              # interactive repl elm reactor                           # compiler and server elm-make Main.elm                     # compile to HTML in index.html elm-make Main.elm --output main.html  # compile to HTML in main.html elm-make Main.elm --output elm.js     # compile to JS in elm.js elm-make Main.elm --warn              # compile and report warnings ```",
+  "description": "",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
