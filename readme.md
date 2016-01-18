@@ -16,6 +16,7 @@ elm-make Main.elm --warn              # compile and report warnings
 - [Elm Style Guide](http://elm-lang.org/docs/style-guide)
 - [Elm Records](http://elm-lang.org/docs/records)
 - [Tool: Html to Elm](http://mbylstra.github.io/html-to-elm/)
+- [Awesome Elm](https://github.com/isRuslan/awesome-elm)
 
 ```elm
 -- a single line comment
@@ -161,5 +162,25 @@ List.map  -- <function> : (a -> b) -> List a -> List b
 names = ["larry", "moe", "curly"]
 List.map String.toUpper names --> ["LARRY", "MOE", "CURLY"] : List String
 List.map String.length names  --> [5,3,5] : List Int
+
+--- Defining union types
+--- Defining all possible values of something, like an enumeration
+type Pet = Dog | Cat | Bird | Bear
+
+--- Then a function can take the Pet type as an argument and use a case expression to match a type of pet
+speak pet = 
+  case pet of
+    Dog ->
+      "Woof"
+      
+    Cat ->
+      "Meow"
+      
+    Bird ->
+      "Chirp"
+      
+    Bear ->
+      "Roar!"
+
 
 ```
