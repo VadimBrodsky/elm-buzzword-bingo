@@ -27,6 +27,22 @@ initialModel =
   }
 
 
+-- UPDATE
+
+
+type Action
+  = NoOp
+  | Sort
+
+update action model =
+  case action of
+    NoOp ->
+      model
+
+    Sort ->
+      { model | entries = List.sortBy .points model.entries }
+
+
 -- VIEW
 
 
@@ -72,5 +88,8 @@ view model =
 
 
 main =
-  view initialModel
+  -- view (update Sort initialModel)
+  initialModel
+    |> update Sort
+    |> view
 
